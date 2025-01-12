@@ -1,0 +1,341 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header Section */
+  header {
+    background: url('./images/headphones_hero_1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  header .container {
+    max-width: 600px;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #FF6565;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    opacity: 0.9;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  header h1, header p, header .cta-button {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  header h1 {
+    animation-delay: 0.3s;
+  }
+  
+  header p {
+    animation-delay: 0.5s;
+  }
+  
+  header .cta-button {
+    animation-delay: 0.7s;
+  }
+  
+  /* Media Query for Small Screens */
+  @media (max-width: 480px) {
+    header {
+      height: auto;
+      padding: 2rem 1rem;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .cta-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* What We Do Section */
+  #what-we-do {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  #what-we-do h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #what-we-do p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .feature {
+    flex: 1;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature img {
+    max-width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .features .feature {
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+  }
+  
+  .features .feature:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  
+  .features .feature:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .features .feature:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  
+
+  /* Our Results Section */
+  #our-results {
+    padding: 4rem 1rem;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  #our-results h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #our-results p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  #our-results .pentagon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  #our-results .pentagon {
+    width: 100px;
+    height: 100px;
+    background-color: #FF6565;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    margin: 1rem;
+  }
+
+  @keyframes rotatePentagon {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .pentagon-container .pentagon {
+    animation: rotatePentagon 2s linear infinite;
+  }
+  
+  
+  /* Contact Us Section */
+  #contact-us {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  #contact-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #contact-us p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  button {
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: #FF6565;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+
+  @keyframes focusGlow {
+    0% {
+      box-shadow: 0 0 0px rgba(0, 123, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+    }
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    animation: focusGlow 0.5s forwards;
+  }
+  
+  
+  /* Footer Section */
+  footer {
+    padding: 2rem 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  footer .social-links img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+  }
+  
+  footer .social-links img:hover {
+    opacity: 0.7;
+  }
+  @keyframes scaleUp {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  .social-links a:hover {
+    animation: scaleUp 0.3s forwards;
+  }
+  
